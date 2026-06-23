@@ -6,15 +6,19 @@ A collection of LeetCode algorithm solutions implemented in Python.
 
 ```
 leetcode/
-├── main.py                          # Entry point
-├── README.md                        # This file
-└── array_and_string/                # Array and String problems
-    ├── closet_number_to_zero.py     # Find closest number to zero
-    ├── longest_common_prefix.py     # Longest common prefix among strings
-    ├── max_profit.py                # Maximum profit from stock transactions
-    ├── merge_alternatively.py        # Merge strings alternatively
-    ├── roman_to_integer.py          # Convert Roman numerals to integers
-    └── summary_range.py             # Summarize consecutive ranges
+├── main.py
+├── README.md
+├── array_and_string/
+│   ├── closet_number_to_zero.py
+│   ├── longest_common_prefix.py
+│   ├── max_profit.py
+│   ├── merge_alternatively.py
+│   ├── roman_to_integer.py
+│   └── summary_range.py
+└── hashmap_and_set/
+    ├── is_anagram.py
+    ├── jewels_and_stones.py
+    └── ransom_note.py
 ```
 
 ## 💻 Usage
@@ -22,14 +26,21 @@ leetcode/
 To run any solution, navigate to the project directory and execute:
 
 ```bash
-python array_and_string/<filename>.py
+python <category>/<filename>.py
+```
+
+Examples:
+
+```bash
+python array_and_string/max_profit.py
+python hashmap_and_set/ransom_note.py
 ```
 
 ## 📝 Notes
 
 - All solutions follow LeetCode problem requirements
-- Code is optimized for clarity and efficiency
-- Each solution includes appropriate time and space complexity considerations
+- Problems are grouped by topic (for example: arrays/strings and hashmap/set)
+- Code focuses on readability first, then optimization
 
 ## 🔧 Requirements
 
@@ -38,5 +49,6 @@ python array_and_string/<filename>.py
 ## 📚 Learning Goals
 
 - Master array and string manipulation techniques
+- Practice hashmap and set-based counting/lookups
 - Understand algorithm optimization strategies
 - Practice problem-solving approaches
