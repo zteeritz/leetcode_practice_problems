@@ -1,6 +1,6 @@
 class Solution:
     def num_of_strings_slinding_window(self, s: str) -> int:
-        count = { 'a': 0, 'b': 0, 'c': 0}
+        count = {'a': 0, 'b': 0, 'c': 0}
         left = 0
         answer = 0
 

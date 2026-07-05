@@ -4,6 +4,7 @@ class Solution:
         words = s.split()
         return len(words[-1])
 
+
 if __name__ == '__main__':
     sol = Solution()
     print(sol.length_of_last_word("Hello World"))
