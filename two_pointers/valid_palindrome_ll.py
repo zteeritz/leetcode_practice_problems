@@ -1,6 +1,3 @@
-from operator import is_
-
-
 class Solution:
     # should decide immediately at first mismatch and test both branches
     def valid_palindrome_wrong_answer(self, s: str) -> bool:
@@ -30,24 +27,26 @@ class Solution:
 
         return True
 
-
     def valid_palindrome(self, s: str) -> bool:
-        def is_palindrome(left: int, right: int) -> bool:
-            left = 0
-            right = len(s) - 1
-
-            while left < right:
-                if s[left] != s[right]:
+        def is_palindrome(l: int, r: int) -> bool:
+            while l < r:
+                if s[l] != s[r]:
                     return False
-                left += 1
-                right -= 1
-
+                l += 1
+                r -= 1
             return True
 
         left = 0
         right = len(s) - 1
         while left < right:
-            return self.is_palindrome()
+            if s[left] != s[right]:
+                # delete left or delete right (only one allowed)
+                return is_palindrome(left + 1, right) or is_palindrome(left, right - 1)
+            left += 1
+            right -= 1
+
+        return True
+
 
 if __name__ == '__main__':
     sol = Solution()
